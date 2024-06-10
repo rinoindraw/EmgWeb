@@ -1,0 +1,40 @@
+/* Chart.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* untuk berada ditengah*/
+    text-align: center;
+  }
+  
+  .chartWrapper {
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0); /* transparan */
+  }
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .result {
+    margin-top: 20px;
+  }
+  
+  .message {
+    margin-top: 20px;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .green {
+    color: green;
+  }
+
+  .baseText {
+    color: black;
+  }
+  

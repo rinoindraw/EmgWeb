@@ -1,0 +1,215 @@
+.banner-container {
+  max-width: 300px;
+  max-height: 300px;
+  display: inline-flex;
+
+  position: relative;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: top center;
+  flex-direction: column;
+  background-image: url("../../assets/wallpapermore.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  padding: 130px 0 100px 0;
+}
+
+/* .bodyWallpaper {
+  
+} */
+
+.flex-banner {
+  display: flex;
+}
+
+.banner a svg {
+  margin: 10px 25px;
+  font-size: 35px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+  font-weight: bold;
+  color: white;
+}
+
+.banner a:hover {
+  color: #83b4ff;
+}
+
+.banner a:hover svg {
+  margin-left: 25px;
+  color: #83b4ff;
+}
+
+.left-anim:hover svg {
+  margin-right: 50px;
+  color: #83b4ff;
+}
+
+.center-anim:hover svg {
+  color: #83b4ff;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-18px);
+  }
+  50% {
+    transform: translateY(18px);
+  }
+  100% {
+    transform: translateY(-18px);
+  }
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+.Resume {
+  width: 160px;
+  height: 35px;
+  border: none;
+  outline: none;
+  transition: ease-out 0.3s;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #83b4ff;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.Resume:hover {
+  color: #fff;
+}
+.Resume::before {
+  transition: 0.5 all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #83b4ff;
+}
+.Resume:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+.Name {
+  /* writing-mode: horizontal-tb !important; */
+  padding: 12px;
+  font-weight: bold;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+}
+
+.period {
+  color: #83b4ff;
+}
+.name-box {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.Introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.Introduction h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.Introduction h2 span {
+  color: #83b4ff;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.Introduction p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  justify-content: center;
+  text-align: center;
+  margin: 1em 0;
+  line-height: 1.25;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a72a0;
+  text-shadow: 1px 1px 2px #fff, -1px -1px 2px #555;
+}
+.Introduction button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 50px;
+  color: #f8fae5;
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-color: #83b4ff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+.Introduction button:hover {
+  background-color: #f8fae5;
+  border: 2px solid #83b4ff;
+  color: #83b4ff;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 5px 8px #83b4ff;
+  -moz-box-shadow: 1px 5px 8px #83b4ff;
+  box-shadow: 1px 5px 8px #83b4ff;
+}
+
+.Introduction img {
+  margin-top: 15px;
+  width: 32px;
+  animation: updown 3s linear infinite;
+}
+
+.Introduction .scrollText {
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1000px) {
+  .Introduction h1 {
+    font-size: 2em;
+  }
+
+  .Introduction p {
+    width: 100%;
+    font-size: 1.1rem;
+    margin: 1em 0;
+  }
+
+  .Introduction h2 span {
+    font-size: 18px;
+  }
+
+  .Introduction h2 {
+    padding: 0 60px;
+    text-align: center;
+  }
+}
