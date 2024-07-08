@@ -1,4 +1,17 @@
 /* Chart.module.css */
+.chartFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chartFlex img {
+  width: 240px;
+  margin-right: 150px;
+  margin-bottom: 80px;
+  /* margin: 80px 50px; */
+  opacity: 0.7;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -15,7 +28,75 @@
   }
   
   .form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .inputContainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .input {
+    width: 320px;
+    border-radius: 25px; /* Membuat input berbentuk rounded */
+    height: 40px; /* Mengatur tinggi input */
+    padding: 0 15px; /* Menambahkan padding horizontal */
+    padding-right: 45px; /* Memberikan ruang untuk tombol submit */
+    border: 1px solid #ccc; /* Menambahkan border */
+    font-size: 16px; /* Mengatur ukuran font */
+    outline: none; /* Menghilangkan outline saat input aktif */
+    transition: border-color 0.3s; /* Menambahkan transisi pada warna border */
+  }
+  
+  .input:focus {
+    border-color: #4bc0c0; /* Mengubah warna border saat input aktif */
+  }
+  
+  .submitButton {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: #4bc0c0; /* Mengatur warna icon */
+    transition: fill 0.3s;
+  }
+  
+  .submitButton:hover .icon {
+    color: #4bc0c0; /* Mengubah warna icon saat hover */
+  }
+
+  .resetButton {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid #4bc0c0;
+    color: #4bc0c0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s, color 0.3s;
+  }
+  
+  .resetButton:hover {
+    background-color: #4bc0c0;
+    color: white;
+  }
+  
+
+  .lastValue {
+    margin-bottom: 20px;
   }
   
   .result {
@@ -36,5 +117,29 @@
 
   .baseText {
     color: black;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .chartFlex img {
+      display: none;
+    }
+
+    .chartWrapper {
+      width: 300px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0); /* transparan */
+    }
+
+    .input {
+      width: 250px;
+      border-radius: 25px; 
+      height: 40px; 
+      padding: 0 15px; 
+      padding-right: 45px; 
+      border: 1px solid #ccc; 
+      font-size: 16px; 
+      outline: none; 
+      transition: border-color 0.3s; 
+    }
   }
   

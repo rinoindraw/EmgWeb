@@ -12,6 +12,8 @@ import {
 } from "chart.js";
 import { ref, onValue } from "firebase/database";
 import { database } from "../../firebase";
+import gundarLogo from "../../assets/pngegg.png";
+import { ReactComponent as SubmitIcon } from "../../assets/enter_icon.svg";
 import styles from "./Chart.module.css"; // Import CSS module
 
 ChartJS.register(
@@ -71,7 +73,7 @@ const Chart = () => {
     scales: {
       y: {
         beginAtZero: true,
-        max: 5500, // set maximum value for y-axis
+        max: 6000, // set maximum value for y-axis
       },
     },
   };
@@ -83,6 +85,11 @@ const Chart = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setEnteredName(userName);
+  };
+
+  const handleReset = () => {
+    setUserName("");
+    setEnteredName("");
   };
 
   const getMessageAndColor = (value) => {
@@ -107,32 +114,45 @@ const Chart = () => {
       : { message: "", color: "" };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.chartWrapper}>
-        <Line data={chartData} options={options} />
-      </div>
-      <h1>{lastValue}</h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <input
-          type="text"
-          value={userName}
-          onChange={handleInputChange}
-          placeholder="Masukkan nama Anda"
-        />
-        <button type="submit">Submit</button>
-      </form>
-      {enteredName && (
-        <div className={styles.result}>
-          <h2>Nama: {enteredName}</h2>
-          <p>Jumlah Densitas Otot Terakhir: {lastValue}</p>
-          {lastValue !== null && (
-            <div className={`${styles.message} ${color}`}>
-              <p>{message}</p>
+    <section className={styles.chartSection}>
+      <div className={styles.chartFlex}>
+        <img src={gundarLogo} alt="gundarLogo" />{" "}
+        <div className={styles.container}>
+          <div className={styles.chartWrapper}>
+            <Line data={chartData} options={options} />
+          </div>
+          <h1 className={styles.lastValue}>{lastValue}</h1>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.inputContainer}>
+              <input
+                type="text"
+                value={userName}
+                onChange={handleInputChange}
+                placeholder="Masukkan nama Anda"
+                className={styles.input}
+              />
+              <button type="submit" className={styles.submitButton}>
+                <SubmitIcon className={styles.icon} />
+              </button>
+            </div>
+            <button type="button" onClick={handleReset} className={styles.resetButton}>
+              Reset
+            </button>
+          </form>
+          {enteredName && (
+            <div className={styles.result}>
+              <h2>Nama: {enteredName}</h2>
+              <p>Jumlah Densitas Otot Terakhir: {lastValue}</p>
+              {lastValue !== null && (
+                <div className={`${styles.message} ${color}`}>
+                  <p>{message}</p>
+                </div>
+              )}
             </div>
           )}
         </div>
-      )}
-    </div>
+      </div>
+    </section>
   );
 };
 

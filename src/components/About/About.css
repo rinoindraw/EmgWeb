@@ -38,14 +38,6 @@
 }
 
 .about-text a {
-  /* color: #000;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
-  text-decoration: none; */
   transition: 0.1s ease-in;
 }
 
@@ -126,5 +118,20 @@
     letter-spacing: 0.8px;
     line-height: 1.5em;
     text-align: center;
+  }
+
+  .about .socialBox {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 30px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 10px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(23, 107, 135, 0.5);
   }
 }
