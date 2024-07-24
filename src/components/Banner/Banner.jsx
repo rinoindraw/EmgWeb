@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { EnvelopeFill } from "react-bootstrap-icons";
-import { Link } from "react-scroll";
 import Typewriter from "typewriter-effect/dist/core";
 import Arrow from "../../assets/arrow.png";
 import styles from "./Banner.module.css"; 

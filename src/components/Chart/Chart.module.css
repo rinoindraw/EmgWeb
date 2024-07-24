@@ -115,6 +115,10 @@
     color: green;
   }
 
+  .greenCustom {
+    color: #50B498;
+  }
+
   .baseText {
     color: black;
   }

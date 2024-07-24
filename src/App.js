@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate  } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
-import Dashboard from "./components/Dashboard/Dashboard";
-
 import Banner from "./components/Banner/Banner";
 import Chart from "./components/Chart/Chart";
-
 
 function App() {
   // State to control dark mode
@@ -41,11 +43,7 @@ function App() {
         />
         <Routes>
           <Route path="/" element={<Chart />} />
-          {/* <Route path="/trashbin" element={<TrashBinOne />} />
-          <Route path="/trashbin2" element={<TrashBinTwo />} />
-          <Route path="/trashbin3" element={<TrashBinThree />} /> */}
           <Route path="/about" element={<Banner />} />
-
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>

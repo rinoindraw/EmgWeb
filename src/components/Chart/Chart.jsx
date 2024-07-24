@@ -98,12 +98,16 @@ const Chart = () => {
         message: "Idle",
         color: styles.baseText,
       };
-    } else if (value < 200) {
-      return { message: "Anda kurang olahraga", color: styles.red };
-    } else if (value < 600) {
-      return { message: "Normal", color: styles.green };
+    } else if (value < 100) {
+      return {
+        message: "Kelistrikan Otot Tidak Terdeteksi",
+        color: styles.red,
+      };
     } else {
-      return { message: "Sering berolahraga", color: styles.green };
+      return {
+        message: "Kelistrikan Otot Terdeteksi",
+        color: styles.greenCustom,
+      };
     }
   };
 
@@ -135,7 +139,11 @@ const Chart = () => {
                 <SubmitIcon className={styles.icon} />
               </button>
             </div>
-            <button type="button" onClick={handleReset} className={styles.resetButton}>
+            <button
+              type="button"
+              onClick={handleReset}
+              className={styles.resetButton}
+            >
               Reset
             </button>
           </form>
