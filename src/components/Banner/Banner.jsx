@@ -14,8 +14,7 @@ const Banner = () => {
   useEffect(() => {
     const typewriter = new Typewriter(typewriterRef.current, {
       strings: [
-        "Berbasis Esp32",
-        "Dengan Menggunakan Internet Of Things",
+        "Berbasis Mikrokontroler",
       ],
       autoStart: true,
       loop: true,
@@ -46,7 +45,7 @@ const Banner = () => {
       </div>
 
       <div className={styles.Introduction}>
-        <h1>Deteksi Otot Dengan Sensor Surface Electromyography</h1>
+        <h1>Alat Ukur Otot Lengan Dengan Sensor Surface Electromyography</h1>
         <h2>
           <span ref={typewriterRef}></span>
         </h2>
